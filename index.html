@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal de Procesos Knauf</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portal de Procesos Knauf</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="app-header">
-    <h1>Portal de Procesos</h1>
-    <p class="subtitle">Visualización simple de procesos y documentos desde cualquier dispositivo.</p>
-  </header>
+<header class="app-header">
+  <img src="logo_knauf.png" class="logo" alt="Knauf" />
+  <h1>Portal de Procesos Industriales</h1>
+  <p class="subtitle">Visualización de procesos, subprocesos y documentación técnica.</p>
+</header>
 
-  <main class="app-main">
-    <section class="toolbar">
-      <input
-        type="search"
-        id="searchInput"
-        placeholder="Buscar por proceso o documento..."
-        aria-label="Buscar procesos"
-      />
-    </section>
+<main class="app-main">
+  <section class="toolbar">
+    <input type="search" id="searchInput" placeholder="Buscar proceso o documento..." />
+  </section>
+  <section id="processList"></section>
+</main>
 
-    <section id="processList" class="process-list">
-      <!-- Contenido cargado dinámicamente por app.js -->
-    </section>
-  </main>
+<footer class="app-footer">
+  <p>Demo conceptual · Knauf Chile</p>
+</footer>
 
-  <footer class="app-footer">
-    <p>Ejemplo de webapp para visualización de procesos industriales (demo conceptual).</p>
-  </footer>
-
-  <div id="docModal" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" id="modalCloseBtn" aria-label="Cerrar">&times;</button>
-      <h2 id="modalTitle"></h2>
-      <p class="modal-meta" id="modalMeta"></p>
-      <p id="modalBody"></p>
-    </div>
+<div id="docModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalCloseBtn">&times;</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalMeta"></p>
+    <p id="modalBody"></p>
   </div>
+</div>
 
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
